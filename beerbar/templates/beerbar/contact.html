@@ -1,0 +1,48 @@
+{% extends 'beerbar/base.html' %}
+{% block body %}
+{% load static %}
+<html>
+<head>
+    <title>beerbar</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'beerbar/contact.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="main-heading">
+        <h1>Contact</h1>
+    </div>
+    <div class="main-container">
+        <div class="sub-container1">
+            <img  src="{% static 'beerbar/images/founder.jpg'%}" width="500" height="500">
+        </div>
+        <div class="sub-container2">
+            <h3>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Hello iam <b>Jhonny</b></h3><br>
+            <p>i know you guys have some questions right after seeing my photo in contact us page like</p>
+            <ul>
+                <li>who am i</li>
+                <li>what iam doing in contact page</li>
+                <li>and most important why iam not even looking in camera</li>
+            </ul>
+            <p>Starting form the first my name is jhonny and iam the assistant of <b>Lavan Chindaliya</b> the <b>Ultimate</b> founder of this e-commmerce site <br> now what iam doing here. comeon guys have some common sense how could you directly contact our all mighty boss so here iam to take all your queries <br> now the most important one its just because i got some attitude, i must have be iam working in worlds no.1 e-commerce site</p>
+            <li>social media links dont work because iam not active on them</li>
+            
+            <div class="d-flex justify-content-end social_icon">
+                <span><i class="fab fa-facebook-square" style='font-size:36px'></i></span>&nbsp &nbsp
+                <span><i class='fab fa-snapchat' style='font-size:36px'></i></span>&nbsp &nbsp
+                <span><i class="fab fa-twitter" style="font-size: 36px;"></i></span>
+            </div>
+
+        </div>
+    </div>
+<script>
+    var currentPage = 'contact';
+    var navTag = document.querySelector('.contact');
+    if (currentPage == navTag.innerText.toLowerCase()){
+        navTag.style.backgroundColor = 'gold';
+        navTag.style.color = 'black';
+    }
+</script>
+</body>
+</html>
+
+{% endblock %}

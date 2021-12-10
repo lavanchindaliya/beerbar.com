@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Beerbar</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'beerbar/base.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="box1">
+        <h1>Beerbar.com!</h1>
+    </div>
+    <div class="topnav">
+        <a class="home" href="http://127.0.0.1:8000/">Home</a>
+        <a class="products" href="http://127.0.0.1:8000/products">Products</a>
+        <a class="contact" href="http://127.0.0.1:8000/contact">Contact</a>
+        <a class="order" href="http://127.0.0.1:8000/yourorder">Your order's</a>
+        <a class="Profile" href="http://127.0.0.1:8000/profile/">Profile</a>
+    </div>
+    {% block body %}
+    {% endblock %}
+
+    <div class="bottomimgcon">
+        <img  src="{% static 'beerbar/images/beer1.jpg' %}" width="1366" style="width: 100%;">
+    </div>
+
+
+</body>
+</html>

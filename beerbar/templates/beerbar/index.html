@@ -1,0 +1,106 @@
+{% extends 'beerbar/base.html' %}
+{% load static %}
+{% block body %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>beerbar</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'beerbar/index.css' %}">
+</head>
+<body>
+  
+
+    <div class="liner">
+        <p>Our products for every ocassion!!!</p>
+    </div>
+    
+    
+    <div class="container1">
+        
+
+        <div class="imgcont1">
+            <a href="http://127.0.0.1:8000/products_vodka">
+            <img  src="{% static 'beerbar/images/vodka.jpg'%}" width="500" height="500">
+            </a>
+        </div>
+        <div class="title1">
+            <p>Vodka</p>
+        </div>
+        <div class="para1">
+            <p>now this is a drink you don’t drink for the taste. You drink vodka to get hammered. So gather some friends, get some pickles or sour onions and beers with it. Kick back the vodka shots in a steady pace, while you flush them down with some of your sour treats and beer. Now you don’t wanna do this before going out. You don’t wanna be too far from the place you sleep"</a></p>
+        </div>
+        
+        
+    </div>
+    <div class="container2">
+        <div class="imgcont2">
+            <a href="http://127.0.0.1:8000/products_rum"><img src="{% static 'beerbar/images/rum.jpg' %}" alt="rum">
+            </a>
+            
+        </div>
+        <div class="title1">
+            <p>Rum</p>
+        </div>
+        <p>the moments I prefer straight rum are the days when it’s too hot to do anything. Find yourself a nice bottle of brown rum and if possible look for the waterside. In a while you probably convinced yourself you’re a fierce pirate. Hell, you might even hijack a boat!</p>
+    </div>
+    <div class="container3">
+        <div class="imgcont3">
+            <a href="http://127.0.0.1:8000/products_whisky"><img  src="{% static 'beerbar/images/Whiskey.jpg'%}" width="500" height="500">
+            </a>
+            
+        </div>
+        <div class="title1">
+            <p>Whiskey</p>
+        </div>
+        <p> now this is a drink you want in a stripclub or at a poker evening. Both perfect occasions to light up a big cigar too. Picture it: a nice glass of Scotch on the rocks, the sweet smell of cigar smoke and the thrill of spending money on gorgeous women or gaining it with some major bluffing. Life can’t get much sweeter.</p>
+    </div>
+    <div class="container4">
+        <div class="imgcont4">
+            <a href="http://127.0.0.1:8000/products_wine"><img  src="{% static 'beerbar/images/wine.jpg'%}" width="500" height="500">
+            </a>
+        </div>
+        <div class="title1">
+            <p>Wine</p>
+        </div>
+        <p>the perfect drink for diner parties and restaurants. And not only while you’re still eating. After the food you keep those bottles coming. The full stomach and some good full glasses will give you a sleepy buzz. No problem, you’re not going anywhere anyway.</p>
+    </div>
+    <div class="container5">
+        <div class="imgcont5">
+            <a href="http://127.0.0.1:8000/products_gin">
+                <img  src="{% static 'beerbar/images/gin.jpg'%}" width="500" height="500">
+            </a>
+        </div>
+        <div class="title1">
+            <p>Gin</p>
+        </div>
+        <p>well let’s be honest, the only reason people still buy tonic is because it mixes so well with gin. A great drink to have before going to a club. At home or in a bar, gin-tonic is the way to get yourself in the mood. Also a great drink to start with after a hangover in the morning. Your stomach is probably not ready for beer and tequila yet, but after some gin-tonics you’ll feel reborn and ready to take on every drink in the building.</p>
+    </div>
+    <div class="container6">
+        <div class="imgcont6">
+            <a href="http://127.0.0.1:8000/products_mezcal">
+                <img  src="{% static 'beerbar/images/mezcal.jpg'%}" width="500" height="500">
+            </a>
+            
+        </div>
+        <div class="title1">
+            <p>Mezcal</p>
+        </div>
+        <p>Mezcal is an important part of Mexican life, particularly in Oaxaca. The spirit is almost seen as a member of the family, rather than just something to drink. It’s massaged onto children’s rashes, used to welcome loved ones home and offers a social glue of sorts, helping to bring strangers together.</p>
+    </div>
+
+
+   
+ 
+
+<script>
+    var currentPage = 'home';
+    var navTag = document.querySelector('.home');
+    console.log(navTag);
+    if (currentPage == navTag.innerText.toLowerCase()){
+        navTag.style.backgroundColor = 'gold';
+        navTag.style.color = 'black';
+    }
+</script>
+</body>
+</html>
+{% endblock %}

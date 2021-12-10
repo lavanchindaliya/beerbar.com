@@ -1,0 +1,35 @@
+{% extends 'beerbar/base.html' %}
+
+{% block body %}
+{% load static %}
+<html>
+<head>
+    <title>beerbar</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'beerbar/products.css' %}">
+</head>
+<body>
+    <div class="main-heading">
+        <h1>Beer</h1>
+    </div>
+    <div class="main-container">
+        {% for beer in all_beer %}
+        <div class="box0">
+            <div class="sub-containerimg">
+                <a href="http://127.0.0.1:8000/yourorder"><img src="{{beer.image.url}}" width="250" height="300"></a>
+            </div>
+            
+            <div class="sub-container">
+                <h5>{{beer.brand}}</h5>
+                <h5>{{beer.name}}</h5>
+                <h7>{{beer.description}}</h7><br><br>
+                <h7>price:- ₹ {{beer.price}}</h7><br><br><br>
+                <button>Add to cart!</button>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>
+{% endblock %}

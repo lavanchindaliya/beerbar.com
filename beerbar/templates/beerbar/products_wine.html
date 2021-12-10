@@ -1,0 +1,37 @@
+{% extends 'beerbar/base.html' %}
+
+{% block body %}
+{% load static %}
+<html>
+<head>
+    <title>beerbar</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'beerbar/products.css' %}">
+</head>
+<body>
+    <div class="main-heading">
+        <h1>Wine</h1>
+    </div>
+    <div class="main-container">
+        {% for wine in all_wine %}
+        <div class="box0">
+            <div class="sub-containerimg">
+                <a href="http://127.0.0.1:8000/yourorder"><img src="{{wine.image.url}}" width="250" height="300"></a>
+            </div>
+            
+            <div class="sub-container">
+                <h5>{{wine.brand}}</h5>
+                <h5>{{wine.name}}</h5>
+                <h7>{{wine.description}}</h7><br><br>
+                <h7>price:- ₹ {{wine.price}}</h7><br><br><br>
+                <form action="{% url 'add' wine.name  wine.price wine.category %}" method="POST">{% csrf_token %}
+                    <input type="submit" value="Add to cart!" class="btn btn-warning">
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+
+</body>
+</html>
+{% endblock %}
